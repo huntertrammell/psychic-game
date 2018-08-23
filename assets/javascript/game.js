@@ -26,7 +26,5 @@ document.onkeypress = function myFunction(event) {
 }
 
 
-
-
 //document.getElementById('letterUsed').innerHTML = ("Letters Guessed: " + lettersGuessed);
 
