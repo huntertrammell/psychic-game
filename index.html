@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-    
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Patrick+Hand+SC" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">    
 </head>
 <body>
-    <div class="jumbotron jumbotron-fluid text-center border-info">
+    <div class="jumbotron jumbotron-fluid bg-white text-center heading">
         <div class="container">
-            <h1 class="display-4 font-weight-bold">Letter Guess Game</h1>
-            <p class="lead">Think you can guess what letter I am thinking of?</p>
+            <h1 class="display-3 font-weight-bold bg-white display-inline">Letter Guess Game</h1>
+            <p class="bungee lead">Think you can guess what letter I am thinking of?</p>
         </div>
     </div>
     <div class="container p-4">
@@ -21,23 +21,26 @@
             <span class="p-3"></span>
         </div>
     </div>
-    <div class="container bg-light border border-info rounded shadow-large ">
+    <div class="container rounded">
         <div class="row">
-            <div class="col-12 text-center">
-                <p class="font-weight-bold font-italic p-2">Press any letter on your keyboard to enter your guess.</p>
+            <div class="col-6 text-center">
+                <p class="bungee font-weight-bold font-italic p-2">Press any letter on your keyboard to guess.</p>
+            </div>
+            <div class="col-6">
+                <img class="gif" src="assets/images/question.gif" alt="marioblock.gif" style="right: 22px;top: 10px;width: 450px;height: 280px;">
             </div>
         </div>
         <div class="row">
-            <p class="lead p-2" id="wins">Wins: 0</p>
+            <p class="hand lead p-2" id="wins">Wins: 0</p>
         </div>
         <div class="row">
-            <p class="lead p-2" id="losses">Loses: 0</p>
+            <p class="hand lead p-2" id="losses">Loses: 0</p>
         </div>
         <div class="row">   
-            <p class="lead p-2" id="guessesRemaining">Guesses Remaining: 10</p>
+            <p class="hand lead p-2" id="guessesRemaining">Guesses Remaining: 10</p>
         </div>
         <div class="row">
-            <p class="lead p-2" id="letterUsed">Letters Guessed: </p>
+            <p class="hand lead p-2" id="letterUsed">Letters Guessed: </p>
         </div>
     </div>
 <script id="js" type = "text/javascript" src="assets/javascript/game.js"></script>
