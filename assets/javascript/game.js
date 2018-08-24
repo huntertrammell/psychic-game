@@ -32,10 +32,12 @@ document.onkeypress = function myFunction(event) {
         computerGuess = alphabetArray[Math.floor(Math.random() * alphabetArray.length)];
         console.log(computerGuess);
         document.getElementById('letterUsed').innerHTML = ("Letters Guessed: ");
+        guessesRemaining = 10;
         guessedLetters = [];
 
     } else if (guessesRemaining < 0){
         guessesRemaining = 10;
+        guessedLetters = [];
     }
 
     document.getElementById('wins').innerHTML = ("Wins: " + wins);

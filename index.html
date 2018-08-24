@@ -5,17 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     
 </head>
 <body>
-    <h1>Word Guess Game</h1>
-    <h5>Guess what letter I'm thinking of</h5>
-    <p id="wins">Wins: 0</p>
-    <p id="losses">Loses: 0</p>
-    <p id="guessesRemaining">Guesses Remaining: 10</p>
-    <p id="letterUsed">Letters Guessed: </p>
-
+    <div class="jumbotron jumbotron-fluid text-center border-info">
+        <div class="container">
+            <h1 class="display-4 font-weight-bold">Word Guess Game</h1>
+            <p class="lead">Think you can guess what letter I am thinking of?</p>
+        </div>
+    </div>
+    <div class="container p-4">
+        <div class="row p-4">
+            <span class="p-3"></span>
+        </div>
+    </div>
+    <div class="container bg-light border border-info rounded shadow-large ">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="font-weight-bold font-italic p-2">Press any letter on your keyboard to enter your guess.</p>
+            </div>
+        </div>
+        <div class="row">
+            <p class="lead p-2" id="wins">Wins: 0</p>
+        </div>
+        <div class="row">
+            <p class="lead p-2" id="losses">Loses: 0</p>
+        </div>
+        <div class="row">   
+            <p class="lead p-2" id="guessesRemaining">Guesses Remaining: 10</p>
+        </div>
+        <div class="row">
+            <p class="lead p-2" id="letterUsed">Letters Guessed: </p>
+        </div>
+    </div>
 <script id="js" type = "text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>
