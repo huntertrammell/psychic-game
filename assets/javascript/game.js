@@ -4,14 +4,13 @@ var alphabetArray = ['a', 'b', 'd', 'c', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
 var wins = 0;
 var loses = 0;
 var guessesRemaining = 10;
-
+var guessedLetters = [];
     var computerGuess = alphabetArray[Math.floor(Math.random() * alphabetArray.length)];
     console.log(computerGuess);
 
-
-
 document.onkeypress = function myFunction(event) {
-    var userGuess = event.key.toLowerCase();
+    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+    guessedLetters.push(userGuess);
     //console.log(userGuess);
 
     if (userGuess === computerGuess) {
@@ -20,16 +19,20 @@ document.onkeypress = function myFunction(event) {
         console.log(computerGuess);
         guessesRemaining = 10;
         document.getElementById('letterUsed').innerHTML = ("Letters Guessed: ");
-    } 
+    } else if (guessedLetters[""] == String.fromCharCode(event.keyCode).toLowerCase()) {
+        alert("You have already guessed this");
+    }
     else {
         guessesRemaining--;
-        document.getElementById('letterUsed').innerHTML = ("Letters Guessed: " + (userGuess + ","));
+        document.getElementById('letterUsed').innerHTML = ("Letters Guessed: " + guessedLetters.join(" ,"));
+        guessedLetters.join(', ');
     }
     if (guessesRemaining === 0) {
         loses++;
         computerGuess = alphabetArray[Math.floor(Math.random() * alphabetArray.length)];
         console.log(computerGuess);
         document.getElementById('letterUsed').innerHTML = ("Letters Guessed: ");
+        guessedLetters = [];
 
     } else if (guessesRemaining < 0){
         guessesRemaining = 10;
